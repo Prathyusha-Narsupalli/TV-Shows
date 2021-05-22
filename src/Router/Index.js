@@ -12,7 +12,6 @@ const routes = [
     path: '/',
     name: "HomePage",
     component: HomePage,
-
   },
   {
     path: '/ShowDetails/:id',

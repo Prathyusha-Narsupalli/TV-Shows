@@ -2,15 +2,15 @@
   <div class="show">
     <router-link :to="{ name: 'ViewShowDetails', params: { id: show.id } }">
     <img :src="show.image.medium" />
-     <div class="text-center"><b>{{ show.name }}</b></div>
+     <div><b>{{ show.name }}</b></div>
      </router-link>
      <div>
-      <b-icon icon="star-fill" class="star-icon mx-1"></b-icon>
-     <span v-if="show.rating.average">{{ show.rating.average }}</span>
+     <b-icon icon="star-fill" class="star-icon mx-1"></b-icon>
+     <span v-if="show.rating.average"><b>{{ show.rating.average }} </b></span>
      <span v-else><b>NA</b></span>
-     <span class="right" v-if="show.premiered"><b>{{ show.premiered.substr(0, 4) }}</b></span>
+     <span v-if="show.premiered"><b> | {{ show.language}}</b></span>
      </div>
-     <b class="genre">{{show.genres.join(" | ")}}</b> 
+     <b >{{show.genres.join(" , ")}}</b> 
   </div>
 </template>
 <script>
@@ -30,17 +30,10 @@ div{
   width:210px;
 }
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 b{
-    color: black;
-}
-.right{
-    float: right;
-}
-.genre{
-  width:100%;
-  color:forestgreen
+  color: black;
 }
 .star-icon {
   color: rgb(255, 251, 1);

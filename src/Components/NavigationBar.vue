@@ -1,7 +1,7 @@
 <template>
 <div>
   <b-navbar toggleable="sm" type="dark" variant="info">
-    <b-navbar-brand href="#" class="text-dark nav">TV Shows</b-navbar-brand>
+    <b-navbar-brand href="#" class="text-dark brand">TV Shows</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -14,9 +14,9 @@
       </b-navbar-nav>
 
 
-      <b-navbar-nav class="right">
-        <b-form-input size="sm" class="mr-sm-2" placeholder="Search" v-model="showName" @keyup.enter="searchForShows"></b-form-input>
-        <b-button size="sm" class="my-2 my-sm-0" type="submit" @click="searchForShows">Search</b-button>
+      <b-navbar-nav class="alignment">
+        <input class="search" placeholder="Search" v-model="showName" @keyup.enter="searchForShows"/>
+        <b-button size="sm" class="m-3 my-sm-0" type="submit" @click="searchForShows">Search</b-button>
       </b-navbar-nav>
 
     </b-collapse>
@@ -35,8 +35,12 @@ export default {
   },
   methods:{
     searchForShows(){
-      this.$router.push({ name: 'SearchForShows', params: {showName: this.showName  } })
-      this.showName=""
+      try{
+        this.$router.push({ name: 'SearchForShows', params: {showName: this.showName}})
+      }
+      catch{
+        this.$router.push({name: 'SearchForShows', params: {showName: this.showName}})
+      }
     }
   }
 };
@@ -47,15 +51,29 @@ export default {
   font-weight: bold;
   color: black;
   text-decoration: none;
+  margin-left:130px;
 }
 .nav-link :hover {
   color: white;
   text-decoration: none;
 }
-.right{
-    float: right;
+.alignment{
+    margin-left: auto;
 }
-.nav{
+.brand{
   margin-left: 10px;
+}
+.search{
+  margin-left: 16px;
+  margin-right: 16px;
+  border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .search{
+    margin-right: 0px;
+  }
+  .route{
+    margin-left: 0px;
+  }
 }
 </style>
