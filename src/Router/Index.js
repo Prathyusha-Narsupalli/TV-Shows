@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomePage from '../Views/HomePage'
-import ViewShowDetails from '../Views/ViewShowDetails'
+import ShowDetails from '../Views/ShowDetails'
 import PageNotFound from '../Views/PageNotFound'
+import ErrorPage from '../Components/ErrorPage'
 import SearchForShows from '../Components/SearchForShows'
 
 Vue.use(VueRouter)
@@ -15,14 +16,20 @@ const routes = [
   },
   {
     path: '/ShowDetails/:id',
-    name: "ViewShowDetails",
-    component: ViewShowDetails,
+    name: "ShowDetails",
+    component: ShowDetails,
     props:true
   },
   {
     path: '/SearchForShows/:showName',
     name: "SearchForShows",
     component: SearchForShows,
+    props:true
+  },
+  {
+    path: '/ErrorPage',
+    name: "ErrorPage",
+    component: ErrorPage,
     props:true
   },
   {

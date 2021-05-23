@@ -31,7 +31,6 @@ import {getAllShows} from '../Services/ApiCalls'
 import VueHorizontal from 'vue-horizontal'
 import ErrorPage from '../Components/ErrorPage'
 import Card from '../Components/Card'
-
 export default {
     name: "HomePage",
     components: {
@@ -70,7 +69,6 @@ export default {
 section {
   padding: 16px 24px;
 }
-
 .spinner-border {
   width: 65px;
   height: 65px;
@@ -79,5 +77,4 @@ section {
 .star-icon {
   color: rgb(255, 251, 1);
 }
-
 </style>

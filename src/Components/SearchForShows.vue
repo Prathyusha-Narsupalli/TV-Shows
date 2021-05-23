@@ -49,7 +49,6 @@ export default {
        searchForShows(this.showName).then(response => {
         this.shows=response.data
         this.shows=this.filterTheShows()
-
        }).catch((error)=>{
            this.error=error.message
            }).finally(()=>{this.loading=false})

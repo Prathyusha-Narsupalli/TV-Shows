@@ -1,6 +1,5 @@
 import axios from 'axios'
 
-
 export function getAllShows() {
     return axios.get("http://api.tvmaze.com/shows")
 }

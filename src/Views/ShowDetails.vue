@@ -32,8 +32,12 @@
 </template>
 <script>
 import {getShowDetails} from '../Services/ApiCalls'
+import ErrorPage from '../Components/ErrorPage'
 export default {
-    name:"ViewShowDetails",
+    name:"ShowDetails",
+    components:{
+        ErrorPage
+    },
     props:['id'],
     data(){
         return {
@@ -61,7 +65,7 @@ img{
     
     width:40%;
     height:auto;
-    border:5px solid #021a40;
+    border:5px solid black;
 
 }
 .details{

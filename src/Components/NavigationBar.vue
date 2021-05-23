@@ -7,12 +7,10 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-       <b-nav-item>
-            <router-link class="route" to="/">Home</router-link>
-          </b-nav-item>
-        
+        <b-nav-item>
+          <router-link class="route" to="/">Home</router-link>
+        </b-nav-item>
       </b-navbar-nav>
-
 
       <b-navbar-nav class="alignment">
         <input class="search" placeholder="Search" v-model="showName" @keyup.enter="searchForShows"/>
@@ -25,7 +23,6 @@
 </template>
 
 <script>
-
 export default {
   name: "NavigationBar",
   data(){
@@ -35,12 +32,10 @@ export default {
   },
   methods:{
     searchForShows(){
-      try{
-        this.$router.push({ name: 'SearchForShows', params: {showName: this.showName}})
-      }
-      catch{
-        this.$router.push({name: 'SearchForShows', params: {showName: this.showName}})
-      }
+      this.$router.push({ name: 'SearchForShows', params: {showName: this.showName}}).catch(()=>{
+        this.$router.push({ name: 'ErrorPage', params: {error:"Dont search For Same Show.Search Something Different"}})
+      })
+      this.showName=""
     }
   }
 };
@@ -51,7 +46,6 @@ export default {
   font-weight: bold;
   color: black;
   text-decoration: none;
-  margin-left:130px;
 }
 .nav-link :hover {
   color: white;
@@ -74,6 +68,12 @@ export default {
   }
   .route{
     margin-left: 0px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .route{
+    display: block;
+    text-align: center;
   }
 }
 </style>
