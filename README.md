@@ -15,7 +15,8 @@ Vue version - 2.6.11
 Vue cli version - 4.5.0
 HTTP client: Axios
 Unit Testing framework - Jest
-For Horizontal experince of data I have used Vue Horizontal package. To know more about the package refer the Url : https://www.npmjs.com/package/vue-horizontal
+For Horizontal experince of data I have used Vue Horizontal package.
+To know more about the package refer the Url : https://www.npmjs.com/package/vue-horizontal
 
 Below are the conventions I used while developing the application :
 File naming convention - Pascal Case
