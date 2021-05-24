@@ -5,9 +5,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import router from './Router/Index'
 
-Vue.use(BootstrapVue)
-Vue.use(BootstrapVueIcons)
-Vue.config.productionTip = false
+Vue.use(BootstrapVue);
+Vue.use(BootstrapVueIcons);
+Vue.config.productionTip = false;
 
 new Vue({
   router,

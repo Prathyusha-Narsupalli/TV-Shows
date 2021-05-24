@@ -10,7 +10,7 @@ export default {
     props:['error'],
     methods:{
     goToHome(){
-      this.$router.push('/')
+      this.$router.push('/');
     }
   }
 }

@@ -13,7 +13,7 @@ export default {
   name:"PageNotFound",
   methods:{
     goToHome(){
-      this.$router.push('/')
+      this.$router.push('/');
     }
   }
 };

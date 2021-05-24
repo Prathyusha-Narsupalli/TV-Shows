@@ -48,16 +48,18 @@ export default {
         }
     },
     created(){
-       getAllShows().then(response => {
-        this.shows=response.data;
-        this.popularshows= this.sortByRating()
-         }).catch((error)=>{
-           this.error=error.message
-           }).finally(()=>{this.loading=false})
+        getAllShows().then(response => {
+            this.shows=response.data;
+            this.popularshows= this.sortByRating();
+        }).catch((error)=>{
+                this.error=error.message;
+           }).finally(()=>{
+               this.loading=false;
+            })
     },
     methods:{
         getShowsByGenere(genre){
-            return this.shows.filter((show)=>show.genres.includes(genre))
+            return this.shows.filter((show)=>show.genres.includes(genre));
         },
         sortByRating(){
             return this.shows.sort(function(a, b){return b.rating.average - a.rating.average});

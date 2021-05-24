@@ -50,8 +50,10 @@ export default {
         this.shows=response.data
         this.shows=this.filterTheShows()
        }).catch((error)=>{
-           this.error=error.message
-           }).finally(()=>{this.loading=false})
+            this.error=error.message
+           }).finally(()=>{
+               this.loading=false
+            })
     },
     methods:{
         filterTheShows(){

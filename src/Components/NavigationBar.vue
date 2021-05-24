@@ -33,9 +33,9 @@ export default {
   methods:{
     searchForShows(){
       this.$router.push({ name: 'SearchForShows', params: {showName: this.showName}}).catch(()=>{
-        this.$router.push({ name: 'ErrorPage', params: {error:"Dont search For Same Show.Search Something Different"}})
+        this.$router.push({ name: 'ErrorPage', params: {error:"Dont search For Same Show.Search Something Different"}});
       })
-      this.showName=""
+      this.showName="";
     }
   }
 };

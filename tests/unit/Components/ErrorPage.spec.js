@@ -19,12 +19,12 @@ describe('Testing ErrorPage Component', () => {
     })
 
     afterEach(()=>{
-        wrapper.destroy()
+        wrapper.destroy();
     })
 
     it('Should go render correct component when goToHome button is clicked',() =>{
-        wrapper.find('b-button-stub').trigger('click')
-        expect(push).toHaveBeenCalledWith('/')
+        wrapper.find('b-button-stub').trigger('click');
+        expect(push).toHaveBeenCalledWith('/');
     })
 
 })

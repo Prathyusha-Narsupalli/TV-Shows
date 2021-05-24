@@ -4,7 +4,7 @@ import PageNotFound from '../../../src/Views/PageNotFound'
 
 describe('In ErrorPage Component', () => {
     let wrapper;
-    const push=jest.fn()
+    const push=jest.fn();
     beforeEach(()=> {
         const localVue = createLocalVue();
         localVue.use(BootstrapVue);
@@ -23,15 +23,15 @@ describe('In ErrorPage Component', () => {
     });
 
     it('is a Vue instance',()=>{
-        expect(wrapper.isVueInstance).toBeTruthy()
+        expect(wrapper.isVueInstance).toBeTruthy();
     })
 
     it("Should have a h3 tag with crt text", () => {
-        expect(wrapper.find('h3').text()).toBe("This Page Doesn't Exist")
+        expect(wrapper.find('h3').text()).toBe("This Page Doesn't Exist");
     })
 
     it('test to check weather goToHome method is called when button is clicked',() =>{
-        wrapper.find('b-button-stub').trigger('click')
-        expect(push).toHaveBeenCalledWith('/')
+        wrapper.find('b-button-stub').trigger('click');
+        expect(push).toHaveBeenCalledWith('/');
     })
 })

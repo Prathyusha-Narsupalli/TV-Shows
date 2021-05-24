@@ -17,11 +17,11 @@
             <h1 class="text-center pb-4"><strong>{{show.name}}</strong></h1>
             <p class="description" v-html="show.summary"></p>
             <div class="details">
-                <p> Genre  :  {{show.genres.toString()}}</p>
-                <p>Laguage :  {{show.language}}</p>
-                <p>Conutry :  {{show.network.country.name}}</p>
-                <p>Release :  {{show.premiered}}</p>
-                <p>Rating  :  {{show.rating.average}}</p>
+                <p  v-if="show.genres!=null && show.genres.length!=0"> Genre  :  {{show.genres.toString()}}</p>
+                <p  v-if="show.language!=null">Laguage :  {{show.language}}</p>
+                <p v-if="show.network!=null">Conutry :  {{show.network.country.name}}</p>
+                <p v-if="show.premiered!=null">Release :  {{show.premiered}}</p>
+                <p v-if="show.rating.average!=null">Rating  :  {{show.rating.average}}</p>
             </div>
         </div>
         <div class="text-center m-3">
@@ -48,25 +48,25 @@ export default {
     },
     async created(){
        getShowDetails(this.id).then(response => {
-        this.show=response.data
+            this.show=response.data;
        }).catch((error)=>{
-           this.error=error.message
-           }).finally(()=>{this.loading=false})
+                this.error=error.message;
+           }).finally(()=>{
+               this.loading=false;
+            })
     },
     methods:{
         goBack(){
-            this.$router.go(-1)
+            this.$router.go(-1);
         }
     }
 }
 </script>
 <style scoped>
 img{
-    
     width:40%;
     height:auto;
     border:5px solid black;
-
 }
 .details{
     font-size: 17px;
@@ -82,4 +82,12 @@ img{
   height: 65px;
   margin-top: 120px;
 }
+@media screen and (min-width: 768px) {
+  img{
+      width:310px;
+      height:395px;
+      border:5px solid black;
+  }
+}
+
 </style>

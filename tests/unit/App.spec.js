@@ -31,5 +31,5 @@ describe('Testing App Component', () => {
         it('it should have stubed router-view', ()=>{
             expect(appWrapper.html()).toContain('<router-view-stub name="default">');
         })
-    })
+    });
 });
