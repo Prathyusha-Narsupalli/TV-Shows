@@ -27,7 +27,7 @@ describe("Testing HomePage Component ",()=>{
         await flushPromises();
         expect(wrapper.vm.shows).toEqual(shows.data);
         expect(wrapper.findAll('Card-stub')).toHaveLength(4);
-    })
+    });
 
     it("should render proper content on unsuccessful (Error) page load",async ()=>{
 
@@ -36,5 +36,5 @@ describe("Testing HomePage Component ",()=>{
         await flushPromises();
         expect(wrapper.vm.error).toBe("Network Error");
         expect(wrapper.html()).toContain('<errorpage-stub error="Network Error"></errorpage-stub>');
-    })
-})
+    });
+});

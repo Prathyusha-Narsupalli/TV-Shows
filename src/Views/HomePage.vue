@@ -14,7 +14,7 @@
             <h3 class="m-3">{{genre}}</h3>
             <vue-horizontal >
                 <template v-if="genre==='Popular Shows'">
-                    <section v-for="show in popularshows" :key="show.id">
+                    <section v-for="show in popularShows" :key="show.id">
                         <Card :show="show" />
                     </section>
                 </template>
@@ -41,7 +41,7 @@ export default {
     data() {
         return {
             shows:[],
-            popularshows:[],
+            popularShows:[],
             genres:["Popular Shows","Action","Drama","Romance","Comedy","Fantasy","Anime","Horror","Family","Thriller","Music","Medical","Science-Fiction","Sports"],
             error:null,
             loading:true
@@ -50,7 +50,7 @@ export default {
     created(){
         getAllShows().then(response => {
             this.shows=response.data;
-            this.popularshows= this.sortByRating();
+            this.popularShows= this.sortByRating();
         }).catch((error)=>{
                 this.error=error.message;
            }).finally(()=>{

@@ -21,13 +21,12 @@ describe("Testing ShowDetails components For Succesful Page Load",()=>{
             "image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg"}
         }
     };
-   beforeEach(()=> {
-       
+    beforeEach(()=> {
         getShowDetails.mockResolvedValue(show);
         wrapper = shallowMount(ShowDetails,{
-        stubs: ['b-button']
+            stubs: ['b-button']
+        });
     });
-});
 
     afterEach(()=>{
         wrapper.destroy();
@@ -35,18 +34,18 @@ describe("Testing ShowDetails components For Succesful Page Load",()=>{
 
     it("should render proper content on successful page load",async ()=>{
         await flushPromises();
-        expect(wrapper.vm.show).toEqual(show.data);;
-        expect(wrapper.html()).toContain("Batman")
+        expect(wrapper.vm.show).toEqual(show.data);
+        expect(wrapper.html()).toContain("Batman");
         expect(wrapper.html()).toContain("Drama,Romance");
        
-    })
+    });
 
     it("to check loaders are working Properly or not",async ()=>{
         await wrapper.setData({loading:true});
         expect(wrapper.html()).toContain("Loading");
-    })
+    });
 
-})
+});
 
 describe("In ShowDetails Component for Unsuccessful page load",()=>{
     let wrapper;
@@ -66,5 +65,5 @@ describe("In ShowDetails Component for Unsuccessful page load",()=>{
          await flushPromises();
          expect(wrapper.vm.error).toEqual("Network Error");
          expect(wrapper.html()).toContain('<errorpage-stub error="Network Error">');
-     })
- })
+     });
+ });

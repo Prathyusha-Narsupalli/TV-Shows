@@ -47,17 +47,17 @@ export default {
     props:['showName'],
     created(){
        searchForShows(this.showName).then(response => {
-        this.shows=response.data
+        this.shows=response.data;
         this.shows=this.filterTheShows()
        }).catch((error)=>{
-            this.error=error.message
+            this.error=error.message;
            }).finally(()=>{
-               this.loading=false
+               this.loading=false;
             })
     },
     methods:{
         filterTheShows(){
-            return this.shows.filter((eachShow)=>eachShow.show.image!=null)
+            return this.shows.filter((eachShow)=>eachShow.show.image!=null);
         }
     },
     

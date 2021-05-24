@@ -22,14 +22,14 @@ describe('Testing App Component', () => {
     describe('it should load NavBar component',()=>{
         it('is a vue instance',() =>{
             expect(appWrapper.isVueInstance).toBeTruthy();
-        })
+        });
 
         it('it should have navigationbar-stub', ()=>{
             expect(appWrapper.html()).toContain('<navigationbar-stub>');
-        })
+        });
 
         it('it should have stubed router-view', ()=>{
             expect(appWrapper.html()).toContain('<router-view-stub name="default">');
-        })
+        });
     });
 });

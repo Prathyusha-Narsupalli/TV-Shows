@@ -15,12 +15,12 @@ describe("In ApiCalls file",()=>{
              "image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg"}
              }
         ];
+
         axios.get.mockResolvedValue(mockedResponse);
-  
         await getAllShows().then((result)=>{
             expect(result).toBe(mockedResponse);
-        })
-    })
+        });
+    });
 
     it('tests getShowDetails method', async ()=>{
         axios.get=jest.fn();
@@ -33,8 +33,8 @@ describe("In ApiCalls file",()=>{
   
         await getShowDetails(2).then((result)=>{
             expect(result).toBe(mockedResponse);
-        })
-    })
+        });
+    });
 
     it('test  searchForShows method', async ()=>{
         axios.get=jest.fn();
@@ -47,6 +47,6 @@ describe("In ApiCalls file",()=>{
       
         await searchForShows("Batman").then((result)=>{
             expect(result).toBe(mockedResponse);
-        })
-    })
-})
+        });
+    });
+});
