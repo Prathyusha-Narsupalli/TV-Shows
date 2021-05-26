@@ -1,10 +1,15 @@
-import {shallowMount} from '@vue/test-utils'
+import {shallowMount,createLocalVue} from '@vue/test-utils'
+import {BootstrapVue, BootstrapVueIcons} from 'bootstrap-vue'
 import ShowDetails from '../../../src/Views/ShowDetails.vue'
 import {getShowDetails} from '../../../src/Services/ApiCalls'
 import flushPromises from 'flush-promises';
 
 
 jest.mock('../../../src/Services/ApiCalls');
+const localVue = createLocalVue();
+localVue.use(BootstrapVue);
+localVue.use(BootstrapVueIcons);
+
 
 describe("Testing ShowDetails components For Succesful Page Load",()=>{
    let wrapper;
@@ -16,15 +21,13 @@ describe("Testing ShowDetails components For Succesful Page Load",()=>{
             "genres":["Drama","Romance"],
             "language":"English",
             "rating":{"average":6.6},
-            "premiered":"2012-04-15",
-            "network":{"country":{"name":"Uk"}},
             "image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg"}
         }
     };
     beforeEach(()=> {
         getShowDetails.mockResolvedValue(show);
         wrapper = shallowMount(ShowDetails,{
-            stubs: ['b-button']
+            localVue
         });
     });
 
@@ -36,13 +39,19 @@ describe("Testing ShowDetails components For Succesful Page Load",()=>{
         await flushPromises();
         expect(wrapper.vm.show).toEqual(show.data);
         expect(wrapper.html()).toContain("Batman");
-        expect(wrapper.html()).toContain("Drama,Romance");
+        expect(wrapper.html()).toContain("Drama , Romance");
        
     });
 
     it("to check loaders are working Properly or not",async ()=>{
         await wrapper.setData({loading:true});
         expect(wrapper.html()).toContain("Loading");
+    });
+
+    it("should redirect to new window on 'know more' button click",async ()=>{
+        window.open=jest.fn()
+        await wrapper.find(".test-button").trigger("click")
+        expect(window.open).toHaveBeenCalled();
     });
 
 });
@@ -53,7 +62,7 @@ describe("In ShowDetails Component for Unsuccessful page load",()=>{
     beforeEach(()=> {
         getShowDetails.mockRejectedValue(new Error('Network Error'));
         wrapper = shallowMount(ShowDetails,{
-            stubs: ['b-button']
+            localVue
         });
     });
  

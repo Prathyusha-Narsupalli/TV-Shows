@@ -10,7 +10,7 @@
     </div>
 
     <div class="container" v-else>
-        <div v-for="genre in genres" :key="genre">
+        <div v-for="genre in getGenresList()" :key="genre">
             <h3 class="m-3">{{genre}}</h3>
             <vue-horizontal >
                 <template v-if="genre==='Popular Shows'">
@@ -42,7 +42,6 @@ export default {
         return {
             shows:[],
             popularShows:[],
-            genres:["Popular Shows","Action","Drama","Romance","Comedy","Fantasy","Anime","Horror","Family","Thriller","Music","Medical","Science-Fiction","Sports"],
             error:null,
             loading:true
         }
@@ -63,8 +62,18 @@ export default {
         },
         sortByRating(){
             return this.shows.sort(function(a, b){return b.rating.average - a.rating.average});
+        },
+        getGenresList(){
+            let list=new Set();
+            list.add("Popular Shows");
+            for(let show of this.shows){
+                for(let genre of show.genres){
+                    list.add(genre);
+                }
+            }
+            return list;
         }
-    }
+    }   
 }
 </script>
 <style scoped>

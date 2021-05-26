@@ -48,7 +48,7 @@ export default {
     created(){
        searchForShows(this.showName).then(response => {
         this.shows=response.data;
-        this.shows=this.filterTheShows()
+        this.shows=this.filterByImage()
        }).catch((error)=>{
             this.error=error.message;
            }).finally(()=>{
@@ -56,11 +56,10 @@ export default {
             })
     },
     methods:{
-        filterTheShows(){
+        filterByImage(){
             return this.shows.filter((eachShow)=>eachShow.show.image!=null);
         }
-    },
-    
+    },  
 }
 </script>
 <style scoped>

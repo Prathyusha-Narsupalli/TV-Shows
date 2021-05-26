@@ -10,23 +10,24 @@
     </div>
 
     <div v-else>
-        <div class="text-center">
-            <img class="mt-3 rounded" :src="show.image.original" >
-        </div>
-        <div class="p-4">
-            <h1 class="text-center pb-4"><strong>{{show.name}}</strong></h1>
-            <p class="description" v-html="show.summary"></p>
-            <div class="details">
-                <p  v-if="show.genres!=null && show.genres.length!=0"> Genre  :  {{show.genres.toString()}}</p>
-                <p  v-if="show.language!=null">Laguage :  {{show.language}}</p>
-                <p v-if="show.network!=null">Conutry :  {{show.network.country.name}}</p>
-                <p v-if="show.premiered!=null">Release :  {{show.premiered}}</p>
-                <p v-if="show.rating.average!=null">Rating  :  {{show.rating.average}}</p>
+    
+
+            <div class="show-container">
+                <div class="show-left">
+                    <img class="rounded" :src="show.image.original" >
+                </div>
+                <div class="show-right">
+                    <h1 class="text-center"><strong>{{show.name}}</strong></h1>
+                    <b-icon icon="star-fill" class="star-icon mx-1"></b-icon>
+                    <b v-if="show.rating.average">{{ show.rating.average }} </b>
+                    <b v-else>NA</b>
+                    <b v-if="show.premiered">| {{ show.language}}</b>
+                    <b> | {{show.genres.join(" , ")}}</b> 
+                    <p class="description" v-html="show.summary"></p>
+                    <b-button pill class="m-2" variant="info" @click="goBack">Go Back</b-button>
+                    <b-button pill class="m-2 test-button" variant="info" @click="moreDetails">Know More</b-button>
+                </div>
             </div>
-        </div>
-        <div class="text-center m-3">
-            <b-button pill  variant="info" @click="goBack">Go Back</b-button>
-        </div>
     </div>
 </div>
 </template>
@@ -58,36 +59,58 @@ export default {
     methods:{
         goBack(){
             this.$router.go(-1);
+        },
+        moreDetails(){
+            window.open(this.show.url)
         }
     }
 }
 </script>
 <style scoped>
 img{
-    width:40%;
-    height:auto;
+    width:360px;
+    height: auto;
     border:5px solid black;
-}
-.details{
-    font-size: 17px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: forestgreen;
 }
 .description{
     font-size:20px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Comic sans MS",'Courier New', Courier, monospace;
+    margin-top: 40px;
 }
 .spinner-border {
   width: 65px;
   height: 65px;
   margin-top: 120px;
 }
-@media screen and (min-width: 768px) {
-  img{
-      width:310px;
-      height:395px;
-      border:5px solid black;
+.show-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding:30px;
+  text-align: center;
+}
+
+.show-left {
+  flex: 40%;
+  padding-top:20px;
+}
+
+.show-right {
+  flex: 60%;
+  padding:30px;
+}
+
+@media screen and (max-width: 425px) {
+    img{
+        width: 100%;
+        height:auto;
+    }
+   .show-right, .show-left {
+    flex: 100%;
+    padding:15px;
   }
+}
+ .star-icon {
+  color: rgb(255, 251, 1);
 }
 
 </style>
