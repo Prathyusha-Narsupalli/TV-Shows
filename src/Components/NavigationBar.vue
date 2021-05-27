@@ -70,7 +70,7 @@ export default {
     margin-left: 0px;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   .route{
     display: block;
     text-align: center;

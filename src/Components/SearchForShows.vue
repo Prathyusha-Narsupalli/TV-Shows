@@ -12,12 +12,10 @@
 
     <div v-else-if="shows.length!=0">
         <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6" v-for="show in shows" :key="show.show.id">
-                <div class="gallery">
+            <div class="gallery col-lg-3 col-md-4 col-sm-6" v-for="show in shows" :key="show.show.id">
                 <center>
                 <Card :show="show.show" />
                 </center>
-                </div>
              </div> 
         </div>
     </div>

@@ -24,7 +24,7 @@
                     <b v-if="show.premiered">| {{ show.language}}</b>
                     <b> | {{show.genres.join(" , ")}}</b> 
                     <p class="description" v-html="show.summary"></p>
-                    <b-button pill class="m-2" variant="info" @click="goBack">Go Back</b-button>
+                    <b-button pill class="m-2" variant="info" @click="$router.go(-1)">Go Back</b-button>
                     <b-button pill class="m-2 test-button" variant="info" @click="moreDetails">Know More</b-button>
                 </div>
             </div>
@@ -57,9 +57,6 @@ export default {
             })
     },
     methods:{
-        goBack(){
-            this.$router.go(-1);
-        },
         moreDetails(){
             window.open(this.show.url)
         }

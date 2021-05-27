@@ -12,16 +12,18 @@
     <div class="container" v-else>
         <div v-for="genre in getGenresList()" :key="genre">
             <h3 class="m-3">{{genre}}</h3>
-            <vue-horizontal >
-                <template v-if="genre==='Popular Shows'">
-                    <section v-for="show in popularShows" :key="show.id">
+            <div class="container-fluid">
+                <vue-horizontal >
+                    <template v-if="genre==='Popular Shows'">
+                        <section v-for="show in popularShows" :key="show.id">
+                            <Card :show="show" />
+                        </section>
+                    </template>
+                    <section v-else v-for="show in getShowsByGenere(genre)" :key="show.id">
                         <Card :show="show" />
                     </section>
-                </template>
-                <section v-else v-for="show in getShowsByGenere(genre)" :key="show.id">
-                    <Card :show="show" />
-                </section>
-            </vue-horizontal>
+                </vue-horizontal>
+            </div>
         </div>
     </div>
 </div>
