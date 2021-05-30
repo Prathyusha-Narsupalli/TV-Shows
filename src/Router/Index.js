@@ -4,7 +4,7 @@ import HomePage from '../Views/HomePage'
 import ShowDetails from '../Views/ShowDetails'
 import PageNotFound from '../Views/PageNotFound'
 import ErrorPage from '../Components/ErrorPage'
-import SearchForShows from '../Components/SearchForShows'
+import SearchForShows from '../Views/SearchForShows'
 
 Vue.use(VueRouter)
 

@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import SearchForShows from '../../../src/Components/SearchForShows.vue'
+import SearchForShows from '../../../src/Views/SearchForShows.vue'
 import { searchForShows } from '../../../src/Services/ApiCalls'
 import flushPromises from 'flush-promises';
 

@@ -30,7 +30,7 @@ import {searchForShows} from '../Services/ApiCalls'
 import ErrorPage from '../Components/ErrorPage'
 import Card from '../Components/Card'
 export default {
-    name: "HomePage",
+    name: "SearchForShows",
     components:{
         ErrorPage,
         Card

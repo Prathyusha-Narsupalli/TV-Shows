@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1622354732299" clover="3.2.0">
-  <project timestamp="1622354732300" name="All files">
+<coverage generated="1622355798329" clover="3.2.0">
+  <project timestamp="1622355798329" name="All files">
     <metrics statements="50" coveredstatements="47" conditionals="0" coveredconditionals="0" methods="31" coveredmethods="30" elements="81" coveredelements="77" complexity="0" loc="50" ncloc="50" packages="5" files="9" classes="9"/>
     <package name="src">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -10,7 +10,7 @@
       </file>
     </package>
     <package name="src.Components">
-      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <file name="ErrorPage.vue" path="C:\Users\DELL\Desktop\Assignment\tv-shows\src\Components\ErrorPage.vue">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="13" count="1" type="stmt"/>
@@ -21,19 +21,6 @@
         <line num="35" count="2" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
         <line num="38" count="2" type="stmt"/>
-      </file>
-      <file name="SearchForShows.vue" path="C:\Users\DELL\Desktop\Assignment\tv-shows\src\Components\SearchForShows.vue">
-        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="39" count="3" type="stmt"/>
-        <line num="47" count="3" type="stmt"/>
-        <line num="48" count="2" type="stmt"/>
-        <line num="49" count="2" type="stmt"/>
-        <line num="51" count="1" type="stmt"/>
-        <line num="53" count="3" type="stmt"/>
-        <line num="58" count="8" type="stmt"/>
       </file>
     </package>
     <package name="src.Router">
@@ -56,7 +43,7 @@
       </file>
     </package>
     <package name="src.Views">
-      <metrics statements="27" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="17" coveredmethods="16"/>
+      <metrics statements="37" coveredstatements="37" conditionals="0" coveredconditionals="0" methods="24" coveredmethods="23"/>
       <file name="HomePage.vue" path="C:\Users\DELL\Desktop\Assignment\tv-shows\src\Views\HomePage.vue">
         <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="9"/>
         <line num="32" count="1" type="stmt"/>
@@ -81,6 +68,19 @@
       <file name="PageNotFound.vue" path="C:\Users\DELL\Desktop\Assignment\tv-shows\src\Views\PageNotFound.vue">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="SearchForShows.vue" path="C:\Users\DELL\Desktop\Assignment\tv-shows\src\Views\SearchForShows.vue">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="53" count="3" type="stmt"/>
+        <line num="58" count="8" type="stmt"/>
       </file>
       <file name="ShowDetails.vue" path="C:\Users\DELL\Desktop\Assignment\tv-shows\src\Views\ShowDetails.vue">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
