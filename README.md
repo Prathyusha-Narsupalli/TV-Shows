@@ -5,26 +5,26 @@ Even Users can search for a show and can view it's description.
 ```
 
 ## Project Details
-```
-Framework used - Vue.JS
+
+### Framework used - Vue.JS
+
 I've used VueJS for building this application because it's a framework that is developer friendly,has coding simplicity, small size, fast and is highly flexible in nature and it has a community that makes it better every day.
-```
+
 ### These are the packages that i have used for developing this application:
-```
+
 * Vue version - 2.6.11
 * Vue cli version - 4.5.0
 * HTTP client: Axios
 * Unit Testing framework - Jest
 * For Horizontal experince of data I have used Vue Horizontal package.
   To know more about the package Please refer the Url : https://www.npmjs.com/package/vue-horizontal
-```
 
 ### Below are the conventions I used while developing the application :
-```
+
 * File naming convention - Pascal Case
 * Component naming convention - Pascal Case
 * Object declaration convention - Camel Case
-```
+
 
 ## Project setup
 ```
