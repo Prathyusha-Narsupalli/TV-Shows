@@ -12,7 +12,7 @@
     <div class="container" v-else>
         <div v-for="genre in getGenresList()" :key="genre">
             <h3 class="m-3">{{genre}}</h3>
-            <div class="container-fluid">
+            <div class="px-3">
                 <vue-horizontal >
                     <template v-if="genre==='Popular Shows'">
                         <section v-for="show in popularShows" :key="show.id">

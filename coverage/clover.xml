@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1622045622085" clover="3.2.0">
-  <project timestamp="1622045622085" name="All files">
-    <metrics statements="50" coveredstatements="46" conditionals="0" coveredconditionals="0" methods="32" coveredmethods="30" elements="82" coveredelements="76" complexity="0" loc="50" ncloc="50" packages="5" files="9" classes="9"/>
+<coverage generated="1622354732299" clover="3.2.0">
+  <project timestamp="1622354732300" name="All files">
+    <metrics statements="50" coveredstatements="47" conditionals="0" coveredconditionals="0" methods="31" coveredmethods="30" elements="81" coveredelements="77" complexity="0" loc="50" ncloc="50" packages="5" files="9" classes="9"/>
     <package name="src">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="App.vue" path="C:\Users\DELL\Desktop\Assignment\tv-shows\src\App.vue">
@@ -24,16 +24,16 @@
       </file>
       <file name="SearchForShows.vue" path="C:\Users\DELL\Desktop\Assignment\tv-shows\src\Components\SearchForShows.vue">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="41" count="3" type="stmt"/>
-        <line num="49" count="3" type="stmt"/>
-        <line num="50" count="2" type="stmt"/>
-        <line num="51" count="2" type="stmt"/>
-        <line num="53" count="1" type="stmt"/>
-        <line num="55" count="3" type="stmt"/>
-        <line num="60" count="8" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="53" count="3" type="stmt"/>
+        <line num="58" count="8" type="stmt"/>
       </file>
     </package>
     <package name="src.Router">
@@ -46,43 +46,44 @@
       </file>
     </package>
     <package name="src.Services">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="ApiCalls.js" path="C:\Users\DELL\Desktop\Assignment\tv-shows\src\Services\ApiCalls.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.Views">
-      <metrics statements="28" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="18" coveredmethods="16"/>
+      <metrics statements="27" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="17" coveredmethods="16"/>
       <file name="HomePage.vue" path="C:\Users\DELL\Desktop\Assignment\tv-shows\src\Views\HomePage.vue">
         <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="9"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
-        <line num="42" count="2" type="stmt"/>
-        <line num="50" count="2" type="stmt"/>
-        <line num="51" count="1" type="stmt"/>
-        <line num="52" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
         <line num="54" count="1" type="stmt"/>
-        <line num="56" count="2" type="stmt"/>
-        <line num="61" count="6" type="stmt"/>
-        <line num="64" count="1" type="stmt"/>
-        <line num="67" count="1" type="stmt"/>
-        <line num="68" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="63" count="6" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
         <line num="69" count="1" type="stmt"/>
         <line num="70" count="1" type="stmt"/>
-        <line num="71" count="3" type="stmt"/>
-        <line num="74" count="1" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="73" count="3" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
       </file>
       <file name="PageNotFound.vue" path="C:\Users\DELL\Desktop\Assignment\tv-shows\src\Views\PageNotFound.vue">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="16" count="1" type="stmt"/>
       </file>
       <file name="ShowDetails.vue" path="C:\Users\DELL\Desktop\Assignment\tv-shows\src\Views\ShowDetails.vue">
-        <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="6"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
         <line num="35" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
         <line num="44" count="4" type="stmt"/>
@@ -90,8 +91,7 @@
         <line num="52" count="3" type="stmt"/>
         <line num="54" count="1" type="stmt"/>
         <line num="56" count="4" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="64" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
       </file>
     </package>
   </project>
