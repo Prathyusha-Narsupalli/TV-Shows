@@ -2,10 +2,11 @@ import {shallowMount,createLocalVue} from '@vue/test-utils'
 import VueRouter from 'vue-router';
 import BootstrapVue from 'bootstrap-vue'
 import NavigationBar from '../../../src/Components/NavigationBar.vue'
+import {routes}  from '../../../src/Router/Index.js'
 
 describe('Testing NavigationBar Component', () => {
     let wrapper;
-    const router = new VueRouter({path : '/SearchForShows', name: 'SearchForShows'},{path : '/ErrorPage', name: 'ErrorPage'});
+    const router = new VueRouter({routes});
 
     beforeEach(()=> {
         const localVue = createLocalVue();
