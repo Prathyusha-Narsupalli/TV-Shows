@@ -8,7 +8,7 @@ import SearchForShows from '../Views/SearchForShows'
 
 Vue.use(VueRouter)
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: "HomePage",
