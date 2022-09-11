@@ -2,38 +2,44 @@
   <div class="show">
     <router-link :to="{ name: 'ShowDetails', params: { id: show.id } }">
       <img :src="show.image.medium" />
-      <div><b>{{ show.name }}</b></div>
+      <div>
+        <b>{{ show.name }}</b>
+      </div>
     </router-link>
     <div>
       <b-icon icon="star-fill" class="star-icon mx-1"></b-icon>
-      <span v-if="show.rating.average"><b>{{ show.rating.average }} </b></span>
+      <span v-if="show.rating.average">
+        <b>{{ show.rating.average }} </b>
+      </span>
       <span v-else><b>NA</b></span>
-      <span v-if="show.premiered"><b> | {{ show.language}}</b></span>
+      <span v-if="show.premiered">
+        <b> | {{ show.language }}</b>
+      </span>
     </div>
-    <b >{{show.genres.join(" , ")}}</b> 
+    <b>{{ show.genres.join(" , ") }}</b>
   </div>
 </template>
 <script>
 export default {
-  name:"Card.vue",
-  props:['show']
-}
+  name: "Card.vue",
+  props: ["show"],
+};
 </script>
 <style scoped>
-img{
-  border:2px solid black;
+img {
+  border: 2px solid black;
   margin-bottom: 10px;
 }
-div{
+div {
   padding-bottom: 5px;
 }
-.show{
-  width:210px;
+.show {
+  width: 210px;
 }
-a{
+a {
   text-decoration: none;
 }
-b{
+b {
   color: black;
 }
 .star-icon {
