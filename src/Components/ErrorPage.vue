@@ -6,12 +6,12 @@
 </template>
 <script>
 export default {
-  name: "ErrorPage",
-  props: ["error"],
+  name: 'ErrorPage',
+  props: ['error'],
   methods: {
-    goToHome() {
-      this.$router.push("/");
-    },
-  },
-};
+    goToHome () {
+      this.$router.push('/')
+    }
+  }
+}
 </script>

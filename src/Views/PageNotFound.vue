@@ -10,13 +10,13 @@
 
 <script>
 export default {
-  name:"PageNotFound",
-  methods:{
-    goToHome(){
-      this.$router.push('/');
+  name: 'PageNotFound',
+  methods: {
+    goToHome () {
+      this.$router.push('/')
     }
   }
-};
+}
 </script>
 
 <style scoped>

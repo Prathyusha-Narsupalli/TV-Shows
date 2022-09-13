@@ -1,7 +1,7 @@
 module.exports = {
   preset: '@vue/cli-plugin-unit-jest',
-  collectCoverage:true,
-  collectCoverageFrom:[
+  collectCoverage: true,
+  collectCoverageFrom: [
     '**/*.{js,vue}',
     '!**/node_modules/**',
     '!**/*.config.js',
@@ -9,19 +9,20 @@ module.exports = {
     '!**/tests/e2e/**',
     '!**/main.js',
     '!**/coverage/**',
+    '!**/*.eslintrc.js'
   ],
-  coverageThreshold:{
-    global:{
-      branches:80,
-      functions:80,
-      lines:80,
-      statements:-10
-    },
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: -10
+    }
 
   },
 
-  moduleNameMapper:{
-    '^@/(.*)$':'<rootDir>/src/$1',
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1'
   }
 
 }

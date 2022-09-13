@@ -11,30 +11,30 @@ Vue.use(VueRouter)
 export const routes = [
   {
     path: '/',
-    name: "HomePage",
-    component: HomePage,
+    name: 'HomePage',
+    component: HomePage
   },
   {
     path: '/ShowDetails/:id',
-    name: "ShowDetails",
+    name: 'ShowDetails',
     component: ShowDetails,
-    props:true
+    props: true
   },
   {
     path: '/SearchForShows/:showName',
-    name: "SearchForShows",
+    name: 'SearchForShows',
     component: SearchForShows,
-    props:true
+    props: true
   },
   {
     path: '/ErrorPage',
-    name: "ErrorPage",
+    name: 'ErrorPage',
     component: ErrorPage,
-    props:true
+    props: true
   },
   {
     path: '*',
-    name: "PageNotFound",
+    name: 'PageNotFound',
     component: PageNotFound
   }
 ]

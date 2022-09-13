@@ -21,9 +21,9 @@
 </template>
 <script>
 export default {
-  name: "Card.vue",
-  props: ["show"],
-};
+  name: 'ShowCard',
+  props: ['show']
+}
 </script>
 <style scoped>
 img {

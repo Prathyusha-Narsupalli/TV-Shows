@@ -27,42 +27,42 @@
 </template>
 
 <script>
-import { searchForShows } from "../Services/ApiCalls";
-import ErrorPage from "../Components/ErrorPage";
-import Card from "../Components/Card";
+import { searchForShows } from '../Services/ApiCalls'
+import ErrorPage from '../Components/ErrorPage'
+import Card from '../Components/Card'
 export default {
-  name: "SearchForShows",
+  name: 'SearchForShows',
   components: {
     ErrorPage,
-    Card,
+    Card
   },
-  data() {
+  data () {
     return {
       shows: [],
       error: null,
-      loading: true,
-    };
+      loading: true
+    }
   },
-  props: ["showName"],
-  created() {
+  props: ['showName'],
+  created () {
     searchForShows(this.showName)
       .then((response) => {
-        this.shows = response.data;
-        this.shows = this.filterByImage();
+        this.shows = response.data
+        this.shows = this.filterByImage()
       })
       .catch((error) => {
-        this.error = error.message;
+        this.error = error.message
       })
       .finally(() => {
-        this.loading = false;
-      });
+        this.loading = false
+      })
   },
   methods: {
-    filterByImage() {
-      return this.shows.filter((eachShow) => eachShow.show.image != null);
-    },
-  },
-};
+    filterByImage () {
+      return this.shows.filter((eachShow) => eachShow.show.image != null)
+    }
+  }
+}
 </script>
 <style scoped>
 .spinner-border {

@@ -11,8 +11,8 @@ I've used VueJS for building this application because it's a framework that is d
 
 #### These are the packages that i have used for developing this application:
 
-* Vue version - 2.6.11
-* Vue cli version - 4.5.0
+* Vue version - 2.6.14
+* Vue cli version - 5.0.8
 * HTTP client: Axios
 * Unit Testing framework - Jest
 * For Horizontal experince of data I have used Vue Horizontal package.

@@ -30,59 +30,59 @@
   </div>
 </template>
 <script>
-import { getAllShows } from "../Services/ApiCalls";
-import VueHorizontal from "vue-horizontal";
-import ErrorPage from "../Components/ErrorPage";
-import Card from "../Components/Card";
+import { getAllShows } from '../Services/ApiCalls'
+import VueHorizontal from 'vue-horizontal'
+import ErrorPage from '../Components/ErrorPage'
+import Card from '../Components/Card'
 export default {
-  name: "HomePage",
+  name: 'HomePage',
   components: {
     VueHorizontal,
     ErrorPage,
-    Card,
+    Card
   },
-  data() {
+  data () {
     return {
       shows: [],
       popularShows: [],
       error: null,
-      loading: true,
-    };
+      loading: true
+    }
   },
-  created() {
+  created () {
     getAllShows()
       .then((response) => {
-        this.shows = response.data;
-        this.popularShows = this.sortByRating();
+        this.shows = response.data
+        this.popularShows = this.sortByRating()
       })
       .catch((error) => {
-        this.error = error.message;
+        this.error = error.message
       })
       .finally(() => {
-        this.loading = false;
-      });
+        this.loading = false
+      })
   },
   methods: {
-    getShowsByGenere(genre) {
-      return this.shows.filter((show) => show.genres.includes(genre));
+    getShowsByGenere (genre) {
+      return this.shows.filter((show) => show.genres.includes(genre))
     },
-    sortByRating() {
+    sortByRating () {
       return this.shows.sort(function (a, b) {
-        return b.rating.average - a.rating.average;
-      });
+        return b.rating.average - a.rating.average
+      })
     },
-    getGenresList() {
-      let list = new Set();
-      list.add("Popular Shows");
-      for (let show of this.shows) {
-        for (let genre of show.genres) {
-          list.add(genre);
+    getGenresList () {
+      const list = new Set()
+      list.add('Popular Shows')
+      for (const show of this.shows) {
+        for (const genre of show.genres) {
+          list.add(genre)
         }
       }
-      return list;
-    },
-  },
-};
+      return list
+    }
+  }
+}
 </script>
 <style scoped>
 section {

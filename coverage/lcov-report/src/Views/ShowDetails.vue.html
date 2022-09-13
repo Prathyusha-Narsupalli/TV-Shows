@@ -5,12 +5,13 @@
 <head>
     <title>Code coverage report for src/Views/ShowDetails.vue</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="..\..\prettify.css" />
-    <link rel="stylesheet" href="..\..\base.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(..\..\sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -18,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="..\..\index.html">All files</a> / <a href="index.html">src/Views</a> ShowDetails.vue</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/Views</a> ShowDetails.vue</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
@@ -53,6 +54,12 @@
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
     <div class='status-line high'></div>
     <pre><table class="coverage">
@@ -168,7 +175,15 @@
 <a name='L110'></a><a href='#L110'>110</a>
 <a name='L111'></a><a href='#L111'>111</a>
 <a name='L112'></a><a href='#L112'>112</a>
-<a name='L113'></a><a href='#L113'>113</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">36x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -202,8 +217,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -211,24 +224,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -281,80 +304,87 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-&lt;div&gt;
-    &lt;div v-if="loading &amp;&amp; error==null " class="text-center"&gt;
-        &lt;div class="spinner-border"&gt;&lt;/div&gt;
-        &lt;h3 class="text-dark pt-4"&gt;Loading&lt;/h3&gt;
+  &lt;div&gt;
+    &lt;div v-if="loading &amp;&amp; error == null" class="text-center"&gt;
+      &lt;div class="spinner-border"&gt;&lt;/div&gt;
+      &lt;h3 class="text-dark pt-4"&gt;Loading&lt;/h3&gt;
     &lt;/div&gt;
-&nbsp;
-    &lt;div v-else-if="error!=null"&gt;
-        &lt;ErrorPage :error="error"/&gt;
+    &lt;div v-else-if="error != null"&gt;
+      &lt;ErrorPage :error="error" /&gt;
     &lt;/div&gt;
-&nbsp;
     &lt;div v-else&gt;
-    
-&nbsp;
-            &lt;div class="show-container"&gt;
-                &lt;div class="show-left"&gt;
-                    &lt;img class="rounded" :src="show.image.original" &gt;
-                &lt;/div&gt;
-                &lt;div class="show-right"&gt;
-                    &lt;h1 class="text-center"&gt;&lt;strong&gt;{{show.name}}&lt;/strong&gt;&lt;/h1&gt;
-                    &lt;b-icon icon="star-fill" class="star-icon mx-1"&gt;&lt;/b-icon&gt;
-                    &lt;b v-if="show.rating.average"&gt;{{ show.rating.average }} &lt;/b&gt;
-                    &lt;b v-else&gt;NA&lt;/b&gt;
-                    &lt;b v-if="show.premiered"&gt;| {{ show.language}}&lt;/b&gt;
-                    &lt;b&gt; | {{show.genres.join(" , ")}}&lt;/b&gt; 
-                    &lt;p class="description" v-html="show.summary"&gt;&lt;/p&gt;
-                    &lt;b-button pill class="m-2" variant="info" @click="$router.go(-1)"&gt;Go Back&lt;/b-button&gt;
-                    &lt;b-button pill class="m-2 test-button" variant="info" @click="moreDetails"&gt;Know More&lt;/b-button&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+      &lt;div class="show-container"&gt;
+        &lt;div class="show-left"&gt;
+          &lt;img class="rounded" :src="show.image.original" /&gt;
+        &lt;/div&gt;
+        &lt;div class="show-right"&gt;
+          &lt;h1 class="text-center"&gt;
+            &lt;strong&gt;{{ show.name }}&lt;/strong&gt;
+          &lt;/h1&gt;
+          &lt;b-icon icon="star-fill" class="star-icon mx-1"&gt;&lt;/b-icon&gt;
+          &lt;b v-if="show.rating.average"&gt;{{ show.rating.average }} &lt;/b&gt;
+          &lt;b v-else&gt;NA&lt;/b&gt;
+          &lt;b v-if="show.premiered"&gt;| {{ show.language }}&lt;/b&gt;
+          &lt;b&gt; | {{ show.genres.join(" , ") }}&lt;/b&gt;
+          &lt;p class="description" v-html="show.summary"&gt;&lt;/p&gt;
+          &lt;b-button pill class="m-2" variant="info" @click="$router.go(-1)"&gt;Go Back&lt;/b-button&gt;
+          &lt;b-button
+          pill
+          class="m-2 test-button"
+          variant="info"
+          @click="moreDetails"&gt;
+            Know More
+          &lt;/b-button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/template&gt;
 &lt;script&gt;
-import {getShowDetails} from '../Services/ApiCalls'
+import { getShowDetails } from '../Services/ApiCalls'
 import ErrorPage from '../Components/ErrorPage'
 export default {
-    name:"ShowDetails",
-    components:{
-        ErrorPage
-    },
-    props:['id'],
-    data(){
-        return {
-            show:[],
-            error:null,
-            loading:true
-        }
-    },
-    async created(){
-       getShowDetails(this.id).then(response =&gt; {
-            this.show=response.data;
-       }).catch((error)=&gt;{
-                this.error=error.message;
-           }).finally(()=&gt;{
-               this.loading=false;
-            })
-    },
-    methods:{
-        moreDetails(){
-            window.open(this.show.url)
-        }
+  name: 'ShowDetails',
+  components: {
+    ErrorPage
+  },
+  props: ['id'],
+  data () {
+    return {
+      show: [],
+      error: null,
+      loading: true
     }
+  },
+  async created () {
+    getShowDetails(this.id)
+      .then((response) =&gt; {
+        this.show = response.data
+      })
+      .catch((error) =&gt; {
+        this.error = error.message
+      })
+      .finally(() =&gt; {
+        this.loading = false
+      })
+  },
+  methods: {
+    moreDetails () {
+      window.open(this.show.url)
+    }
+  }
 }
 &lt;/script&gt;
 &lt;style scoped&gt;
-img{
-    width:360px;
-    height: auto;
-    border:5px solid black;
+img {
+  width: 360px;
+  height: auto;
+  border: 5px solid black;
 }
-.description{
-    font-size:20px;
-    font-family: "Comic sans MS",'Courier New', Courier, monospace;
-    margin-top: 40px;
+.description {
+  font-size: 20px;
+  font-family: "Comic sans MS", "Courier New", Courier, monospace;
+  margin-top: 40px;
 }
 .spinner-border {
   width: 65px;
@@ -364,52 +394,52 @@ img{
 .show-container {
   display: flex;
   flex-wrap: wrap;
-  padding:30px;
+  padding: 30px;
   text-align: center;
 }
 &nbsp;
 .show-left {
   flex: 40%;
-  padding-top:20px;
+  padding-top: 20px;
 }
 &nbsp;
 .show-right {
   flex: 60%;
-  padding:30px;
+  padding: 30px;
 }
 &nbsp;
 @media screen and (max-width: 425px) {
-    img{
-        width: 100%;
-        height:auto;
-    }
-   .show-right, .show-left {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .show-right,
+  .show-left {
     flex: 100%;
-    padding:15px;
+    padding: 15px;
   }
 }
- .star-icon {
+.star-icon {
   color: rgb(255, 251, 1);
 }
-&nbsp;
-&lt;/style&gt;</pre></td></tr></table></pre>
+&lt;/style&gt;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon May 31 2021 16:08:15 GMT+0530 (India Standard Time)
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2022-09-13T12:48:09.669Z
             </div>
-        </div>
-        <script src="..\..\prettify.js"></script>
+        <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="..\..\sorter.js"></script>
-        <script src="..\..\block-navigation.js"></script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
     </body>
 </html>
     

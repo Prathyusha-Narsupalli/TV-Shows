@@ -34,28 +34,28 @@
 
 <script>
 export default {
-  name: "NavigationBar",
-  data() {
+  name: 'NavigationBar',
+  data () {
     return {
-      showName: "",
-    };
+      showName: ''
+    }
   },
   methods: {
-    searchForShows() {
+    searchForShows () {
       this.$router
-        .push({ name: "SearchForShows", params: { showName: this.showName } })
+        .push({ name: 'SearchForShows', params: { showName: this.showName } })
         .catch(() => {
           this.$router.push({
-            name: "ErrorPage",
+            name: 'ErrorPage',
             params: {
-              error: "Dont search For Same Show.Search Something Different",
-            },
-          });
-        });
-      this.showName = "";
-    },
-  },
-};
+              error: 'Dont search For Same Show.Search Something Different'
+            }
+          })
+        })
+      this.showName = ''
+    }
+  }
+}
 </script>
 
 <style scoped>

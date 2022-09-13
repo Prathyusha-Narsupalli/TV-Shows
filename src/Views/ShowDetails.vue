@@ -36,39 +36,39 @@
   </div>
 </template>
 <script>
-import { getShowDetails } from "../Services/ApiCalls";
-import ErrorPage from "../Components/ErrorPage";
+import { getShowDetails } from '../Services/ApiCalls'
+import ErrorPage from '../Components/ErrorPage'
 export default {
-  name: "ShowDetails",
+  name: 'ShowDetails',
   components: {
-    ErrorPage,
+    ErrorPage
   },
-  props: ["id"],
-  data() {
+  props: ['id'],
+  data () {
     return {
       show: [],
       error: null,
-      loading: true,
-    };
+      loading: true
+    }
   },
-  async created() {
+  async created () {
     getShowDetails(this.id)
       .then((response) => {
-        this.show = response.data;
+        this.show = response.data
       })
       .catch((error) => {
-        this.error = error.message;
+        this.error = error.message
       })
       .finally(() => {
-        this.loading = false;
-      });
+        this.loading = false
+      })
   },
   methods: {
-    moreDetails() {
-      window.open(this.show.url);
-    },
-  },
-};
+    moreDetails () {
+      window.open(this.show.url)
+    }
+  }
+}
 </script>
 <style scoped>
 img {
